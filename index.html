@@ -1,0 +1,82 @@
+ 
+<html>
+  <head>
+    <title>Emotion To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <div id="title">
+        <h1>Emotion to Emoji</h1>
+        <hr>
+        <span>&#128512;</span>
+        <span>&#128532;</span>
+        <span>&#128545;</span>
+      </div>
+      <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to generate emoji
+      	<br>
+        <b style="color: yellow">Are you Happy?</b>
+        <br>
+        <b style="color: black">Are you Sad?</b>
+        <br>
+        <b style="color: red">Are you Angry?</b>
+        <br>
+      </p>
+      
+      <center id="image">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+	      <label>Webcam</label>
+
+        <br><br>
+        <div id="webcam"></div>
+        <br>
+        <button id="btnwebcam" onclick="take_snapshot()">Take Snapshot</button>
+      </div>
+
+      <div class="col-md-6 col-sm-12 col-xs-12">
+	      <label>Snapshot</label>
+
+        <br><br>
+        <div id="snapshot"></div>
+        <br>
+        <button id="btnwebcam" onclick="check()">Check</button>
+        
+      </div>
+    </center>
+      
+    <h3 id="ep">Emoji Prediction</h3>
+    <br>
+    <br>
+    <h4>Prediction 1...</h4>
+    <br>
+    <h4><span id="p1"></span>&nbsp;&nbsp;<span id="p1emoji"></span> </h5>
+    <br>
+    <br>
+    <h4>Prediction 2...</h4>
+    <br>
+    
+    <h4><span id="p2"></span>&nbsp;&nbsp;<span id="p2emoji"></span> </h5>
+    
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
